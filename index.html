@@ -259,7 +259,7 @@
                         <span id="t-mr" class="title-option">Mr.</span> / 
                         <span id="t-mrs" class="title-option">Mrs.</span> / 
                         <span id="t-miss" class="title-option">Miss</span> / 
-                        <span id="t-mrmrs" class="title-option">Mr. & Mrs.</span>
+                        <span id="t-mrmiss" class="title-option">Mr. & Miss</span>
                     </div>
                     <div id="innerGuestName" class="guest-full-name">Guest Name</div>
                 </div>
@@ -330,7 +330,7 @@
             'mr': document.getElementById('t-mr'),
             'mrs': document.getElementById('t-mrs'),
             'miss': document.getElementById('t-miss'),
-            'mrmrs': document.getElementById('t-mrmrs')
+            'mrmiss': document.getElementById('t-mrmiss')
         };
 
         if (title) {
@@ -367,6 +367,7 @@
             const cover = document.getElementById('coverImg');
             
             if (!cover.classList.contains('open')) {
+                card.classList.is('open') ? null : card.classList.add('is-open'); // wait, keep original logic: card.classList.add('is-open')
                 card.classList.add('is-open');
                 cover.classList.add('open');
 
